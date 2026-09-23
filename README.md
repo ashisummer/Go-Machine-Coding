@@ -6,3 +6,5 @@ Frequently asked Go problems
 // 2. print 1 to 100 with 10 routines , workerpool
 
 // 3. odd even channels
+
+// 4. In memeory cache 
