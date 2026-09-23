@@ -12,14 +12,14 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	ch := make(chan int)
+	ch := make(chan int, 10)
 
 	for i := 0; i < workers; i++ {
 		wg.Add(1)
 		go func(id int) {
 			defer wg.Done()
 			for c := range ch {
-				fmt.Println("worker", i, "speaking", c)
+				fmt.Println("worker", id, "speaking", c)
 			}
 		}(i)
 	}
